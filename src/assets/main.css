@@ -1,0 +1,100 @@
+#app {
+	margin: 0 auto;
+	padding: 2rem;
+	font-weight: normal;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Get Schwifty";
+	src: local("Get Schwifty"),
+	url("./fonts/get_schwifty.ttf")
+}
+
+@font-face {
+	font-family: "Roboto Mono";
+	src: local("Roboto Mono"),
+	url("./fonts/RobotoMono-VariableFont_wght.ttf")
+}
+
+body {
+	color: #829480;
+	width: 100%;
+	height: 100vh;
+	background-color: #272c27;
+	font-family: "Roboto Mono", sans-serif;
+}
+
+select, input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0.5em;
+	border-radius: 8px;
+	font-family: "Roboto Mono", sans-serif;
+	cursor: pointer;
+	outline: inherit;
+	font-size: 100%;
+}
+
+.active {
+	color: #b8e8b4;
+}
+
+button[disabled], button:hover {
+	color: #414940;
+}
+
+input[type="checkbox"] {
+	border: #414940;
+	&:checked {
+		background-color: #b8e8b4;
+	}
+}
+
+input, input[type="checkbox"] {
+	background-color: #414940;
+	border: none;
+	padding: 0.4em 0.4em 0.4em 0.4em;
+	color: currentColor;
+	font-family: "Roboto Mono", sans-serif;
+}
+
+input[type="text"]:focus {
+	outline: 2px solid #b8e8b4;
+	border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	select:focus,
+	textarea {
+		font-size: 16px;
+	}
+}
